@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#071310">
+  <meta name="description" content="THE GARDEN WE NEVER MET — untuk Nanda. Sebuah taman kecil yang tumbuh dari waktu yang pernah kita bagi.">
+  <title>THE GARDEN WE NEVER MET — Nanda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="atmosphere" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div id="ytPlayer" class="yt-player" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">FOR NANDA · YALI YALI AKU</div>
+    
+  </header>
+
+  <main id="story" tabindex="-1">
+
+    <section class="scene scene-intro" data-scene="intro">
+      <div class="intro-light" aria-hidden="true"></div>
+      <div class="scene-content">
+        <p class="eyebrow">untuk nandanya aku</p>
+        <div id="introText" class="hero-copy" aria-live="polite"></div>
+        <button id="beginBtn" class="quiet-button hidden" type="button">sentuh ini ya sayang</button>
+      </div>
+    </section>
+
+    <section class="scene seed-scene" data-scene="seed">
+      <div class="moon"></div>
+      <div class="soil">
+        <div id="seedPlant" class="seed-plant" aria-hidden="true">
+          <span class="stem"></span><span class="leaf leaf-a"></span><span class="leaf leaf-b"></span><span class="bud"></span>
+        </div>
+      </div>
+      <div class="scene-content">
+        <p class="eyebrow">01 · AWAL KECIL KITA</p>
+        <h2>Kita nggak punya satu tempat yang bisa disebut milik kita.</h2>
+        <p>Jadi, entah kenapa, aku ingin membuat satu tempat kecil dari apa yang pernah kita punya.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene days-scene" data-scene="days">
+      <div class="scene-content wide">
+        <p class="eyebrow">02 · HARI-HARI KITA</p>
+        <h2>Kalau dipikir-pikir, kita punya cukup banyak hari.</h2>
+        <p class="subcopy">Bukan hari yang spektakuler. Justru yang biasa-biasa itu yang diam-diam tinggal paling lama.</p>
+        <div id="daysGrid" class="days-grid"></div>
+        <div id="daysGarden" class="mini-garden" aria-label="Bunga dari hari-hari kita"></div>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene little-words-scene" data-scene="words">
+      <div class="scene-content wide">
+        <p class="eyebrow">03 · HAL-HAL KECIL</p>
+        <h2>Ada kata-kata yang kelihatannya kecil.</h2>
+        <p class="subcopy">Tapi kalau datang dari kamu, ternyata nggak sekecil itu.</p>
+        <div id="wordsGarden" class="words-garden"></div>
+        <p id="wordReveal" class="word-reveal" aria-live="polite">Coba sentuh salah satunya.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene our-nights-scene" data-scene="nights">
+      <div class="scene-content wide">
+        <p class="eyebrow">04 · MALAM-MALAM KITA</p>
+        <h2>Kita memang nggak pernah duduk di tempat yang sama.</h2>
+        <p> Tapi kita pernah menghabiskan malam dengan cara kita sendiri.</p>
+        <div class="night-cards">
+          <article><span>TELEPON</span><strong>Suara kamu jadi bagian dari malam-malamku.</strong></article>
+          <article><span>FILM</span><strong>Satu layar. Dua tempat. Tetap terasa seperti menemani.</strong></article>
+          <article><span>GAME</span><strong>Kalah, menang, ribut kecil, ketawa lagi.</strong></article>
+        </div>
+        <p class="small-note">Mungkin itu sebabnya jarak kadang terasa aneh: jauh, tapi waktu terasa dekat.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene stubborn-scene" data-scene="stubborn">
+      <div class="scene-content">
+        <p class="eyebrow">05 · YALI YALI AKU</p>
+        <h2>Ada satu tanaman yang paling keras kepala di sini.</h2>
+        <div id="stubbornPlant" class="stubborn-plant" role="button" tabindex="0" aria-label="Sentuh tanaman kecil">
+          <span class="stalk"></span><span class="stubborn-leaf l1"></span><span class="stubborn-leaf l2"></span><span class="stubborn-flower"></span>
+        </div>
+        <p id="stubbornText" class="large-message">Katanya dia nggak mau tumbuh.</p>
+        <p class="subcopy">Coba sentuh lagi. Dia mirip seseorang yang sedang bertumbuh.</p>
+        <button class="quiet-button scene-next hidden" type="button">oke, lanjut</button>
+      </div>
+    </section>
+
+    <section class="scene ordinary-scene" data-scene="ordinary">
+      <div class="scene-content wide">
+        <p class="eyebrow">06 · HARI-HARI BIASA</p>
+        <h2>Yang paling aku kangenin mungkin justru yang nggak istimewa.</h2>
+        <div id="calendar" class="calendar"></div>
+        <p class="subcopy">Karena ternyata, bersama seseorang nggak selalu butuh kejadian besar.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene distance-scene" data-scene="distance">
+      <div class="distance-lights" aria-hidden="true">
+        <span class="distance-light left"></span>
+        <span class="distance-light right"></span>
+        <span class="distance-thread"></span>
+      </div>
+      <div class="scene-content">
+        <p class="eyebrow">07 · JARAK</p>
+        <h2>Berbeda tempat.</h2>
+        <p>Berbeda kegiatan.</p>
+        <p>Tapi pernah ada satu dunia kecil yang kita isi berdua.</p>
+        <p class="small-note">Aku nggak ingin mengubah jarak menjadi sesuatu yang romantis. Aku cuma ingin mengakui bahwa di balik jarak itu, pernah ada banyak waktu yang berarti.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene regret-scene" data-scene="regret">
+      <div class="scene-content">
+        <p class="eyebrow">08 · SATU MALAM</p>
+        <h2>Ada satu malam yang sampai sekarang rasanya berjalan terlalu cepat.</h2>
+        <div class="regret-story">
+          <p>Kamu sempat menunggu.</p>
+          <p>Mungkin karena masih ada sedikit harapan aku akan berubah pikiran.</p>
+          <p>Dan lucunya...</p>
+          <p>ketika pikiranku akhirnya berubah, waktunya cuma lewat sekitar lima menit.</p>
+          <p>Kamu sudah tertidur.</p>
+        </div>
+        <p class="quiet-after">aku sangat sangat menyesali kejadian malam itu.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene words-scene floating-scene" data-scene="floating">
+      <div id="floatingWords" class="floating-words" aria-hidden="true"></div>
+      <div class="scene-content">
+        <p class="eyebrow">09 · YANG TERSISA</p>
+        <h2>Bukan janji besar.</h2>
+        <p>Bukan juga kalimat yang sempurna.</p>
+        <p>Hanya potongan-potongan kecil dari waktu yang pernah kita bagi.</p>
+        <p class="small-note">Dan ternyata, hal-hal kecil yang pernah kita bagi bersama adalah bagian yang paling ingin aku simpan baik-baik.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene garden-scene" data-scene="garden">
+      <div class="complete-garden" id="completeGarden" aria-label="Taman kecil untuk Nanda"></div>
+      <div class="scene-content">
+        <p class="eyebrow">10 · TAMAN KITA</p>
+        <h2>Jadi, ini bukan kenangan tentang tempat yang pernah kita datangi.</h2>
+        <p>Ini cuma tempat untuk hari-hari, telepon, film, game, tawa, diam, dan kata-kata yang pernah membuat jarak terasa sedikit lebih kecil.</p>
+        <p class="garden-hint">Sentuh bunga-bunganya. Beberapa serius. Beberapa cuma iseng, seperti aku.</p>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene question-scene" data-scene="question">
+      <div class="moon large"></div>
+      <div class="scene-content">
+        <p class="eyebrow">11 · UNTUK KAMU</p>
+        <div class="slow-copy">
+          <p>Nanda...</p>
+          <p>aku baru sadar, ternyata mengenal seseorang bukan cuma tentang tahu apa yang dia suka.</p>
+          <p>kadang tentang belajar memahami bagian dirinya yang dulu kita abaikan.</p>
+          <p>Dan ada hal-hal tentang diriku yang sekarang aku lihat jauh lebih jelas.</p>
+        </div>
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene photo-scene" data-scene="photos">
+      <div class="scene-content wide">
+        <p class="eyebrow">12 · UNTUK NANDANYA AKU</p>
+        <h2>Akhirnya, halaman yang isinya cuma kamu.</h2>
+        <p class="subcopy">Dua puluh ruang kecil. Sepuluh foto tentang kamu, lalu sepuluh potongan kecil dari waktu yang pernah kita bagi.</p>
+        <div class="photo-grid">
+          <figure class="photo-card"><img src="assets/photos/nanda-01.jpg" alt="Nanda 01" loading="lazy"><figcaption>si cantik</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-02.jpg" alt="Nanda 02" loading="lazy"><figcaption>yali yali aku</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-03.jpg" alt="Nanda 03" loading="lazy"><figcaption>kesayangan aku</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-04.jpg" alt="Nanda 04" loading="lazy"><figcaption>cadar itu...</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-05.jpg" alt="Nanda 05" loading="lazy"><figcaption>jangan sombong</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-06.jpg" alt="Nanda 06" loading="lazy"><figcaption>iya, kamu cantik</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-07.jpg" alt="Nanda 07" loading="lazy"><figcaption>yang ini favorit</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-08.jpg" alt="Nanda 08" loading="lazy"><figcaption>tetap kamu</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-09.jpg" alt="Nanda 09" loading="lazy"><figcaption>hehe</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-10.jpg" alt="Nanda 10" loading="lazy"><figcaption>terakhir, katanya</figcaption></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-11.jpg" alt="Game screenshot 1" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-12.jpg" alt="Game screenshot 2" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-13.jpg" alt="Game screenshot 3" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-14.jpg" alt="Game screenshot 4" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-15.jpg" alt="Game screenshot 5" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-16.jpg" alt="Game screenshot 6" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-17.jpg" alt="Game screenshot 7" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-18.jpg" alt="Game screenshot 8" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-19.jpg" alt="Game screenshot 9" loading="lazy"></figure>
+          <figure class="photo-card"><img src="assets/photos/nanda-20.jpg" alt="Game screenshot 10" loading="lazy"></figure>
+        </div>
+        
+        <button class="quiet-button scene-next" type="button">touch here</button>
+      </div>
+    </section>
+
+    <section class="scene tomorrow-scene" data-scene="tomorrow">
+      <div class="scene-content">
+        <p class="eyebrow">UNTUK NANDANYA AKU</p>
+        <div class="future-calendar">
+          <span>Besok</span><span>Minggu Depan</span><span>Suatu Hari</span>
+        </div>
+        <div class="final-copy">
+          <p>Aku nggak tahu besok akan seperti apa.</p>
+          <p>Aku juga nggak mau memaksa cerita ini punya akhir yang belum kita tahu.</p>
+          <p>Tapi kalau suatu hari kita kembali berbicara, aku ingin kamu bertemu dengan versi diriku yang sudah benar-benar belajar.</p>
+          <p>Dan kalau suatu hari kita akhirnya berada di bawah langit yang sama, semoga aku sudah tahu cara menjaganya.</p>
+        </div>
+        <strong class="continued">THE GARDEN REMAINS.</strong>
+        <p class="signature">untuk Nanda, yali yali aku, kesayangan aku.</p>
+
+        <div class="final-signature">
+          <p class="final-message">Aku sayang kamu, dan aku akan buktikan itu.</p>
+          <div class="final-name">Denis Adha</div>
+          <div class="final-name-sub">(Denisnya Nanda)</div>
+          <div class="final-love">made with love ❤️</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Place 10 square-ish photos here named nanda-01.jpg through nanda-10.jpg. The website crops them to 1:1 automatically.
